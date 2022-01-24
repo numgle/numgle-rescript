@@ -2,11 +2,10 @@
   "name": "numgle-rescript",
   "version": "0.0.1",
   "description": "Numgle in ReScript",
-  "main": "src/index.bs.js",
   "scripts": {
     "re:build": "rescript",
     "re:start": "rescript build -w",
-    "start": "node src/index.bs.js"
+    "start": "node src/Index.bs.js"
   },
   "author": "Gidong Kwon",
   "license": "MIT",
