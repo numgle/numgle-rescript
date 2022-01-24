@@ -123,13 +123,13 @@ function convert(input) {
                         var cj$1 = cj !== undefined ? Belt_Option.getWithDefault(Belt_Array.get(cj, cho), "") : "";
                         return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.jong, jong), "") + cj$1;
                     case /* NotCompleteHangul */1 :
-                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.han, hangulCodePoint._0), "");
+                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.han, hangulCodePoint._0 - Data.charConversionMap.range.notCompleteHangul.start | 0), "");
                     case /* EnglishUpper */2 :
-                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.englishUpper, hangulCodePoint._0 - 65 | 0), "");
+                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.englishUpper, hangulCodePoint._0 - Data.charConversionMap.range.uppercase.start | 0), "");
                     case /* EnglishLower */3 :
-                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.englishLower, hangulCodePoint._0 - 97 | 0), "");
+                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.englishLower, hangulCodePoint._0 - Data.charConversionMap.range.lowercase.start | 0), "");
                     case /* Number */4 :
-                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.number, hangulCodePoint._0 - 48 | 0), "");
+                        return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.number, hangulCodePoint._0 - Data.charConversionMap.range.number.start | 0), "");
                     case /* SpecialLetter */5 :
                         return Belt_Option.getWithDefault(Belt_Array.get(Data.charConversionMap.special, Data.charConversionMap.range.special.indexOf(hangulCodePoint._0)), "");
                     

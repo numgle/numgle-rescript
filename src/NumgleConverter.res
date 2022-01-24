@@ -82,10 +82,10 @@ let convert = (input: string) => {
             }
             map.jong[jong]->getWithDefault("") ++ cj
           }
-        | NotCompleteHangul(hangulCodePoint) => map.han[hangulCodePoint]->getWithDefault("")
-        | EnglishUpper(codePoint) => map.englishUpper[codePoint - 65]->getWithDefault("")
-        | EnglishLower(codePoint) => map.englishLower[codePoint - 97]->getWithDefault("")
-        | Number(codePoint) => map.number[codePoint - 48]->getWithDefault("")
+        | NotCompleteHangul(hangulCodePoint) => map.han[hangulCodePoint - map.range.notCompleteHangul.start]->getWithDefault("")
+        | EnglishUpper(codePoint) => map.englishUpper[codePoint - map.range.uppercase.start]->getWithDefault("")
+        | EnglishLower(codePoint) => map.englishLower[codePoint - map.range.lowercase.start]->getWithDefault("")
+        | Number(codePoint) => map.number[codePoint - map.range.number.start]->getWithDefault("")
         | SpecialLetter(codePoint) => map.special[map.range.special->indexOf(codePoint)]->getWithDefault("")
       }
     })
