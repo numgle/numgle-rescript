@@ -5,11 +5,18 @@
   "main": "src/index.bs.js",
   "scripts": {
     "re:build": "rescript",
-    "re:start": "rescript build -w"
+    "re:start": "rescript build -w",
+    "start": "node src/index.bs.js"
   },
   "author": "Gidong Kwon",
   "license": "MIT",
   "devDependencies": {
     "rescript": "^9.1.4"
+  },
+  "dependencies": {
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "express": "^4.17.2",
+    "rescript-express": "^0.4.1",
+    "rescript-nodejs": "^14.2.0"
   }
 }
