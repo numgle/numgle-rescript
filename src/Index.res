@@ -18,5 +18,5 @@ app->get("/:value", (req, res) => {
 
 let port = 8086
 let _ = app->listenWithCallback(port, _ => {
-  Js.log("Server started at: " ++ port->Belt.Int.toString)
+  Js.log("Server started at: http://localhost:" ++ port->Belt.Int.toString)
 })

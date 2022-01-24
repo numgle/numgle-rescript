@@ -23,7 +23,7 @@ app.get("/:value", (function (req, res) {
       }));
 
 app.listen(8086, (function (param) {
-        console.log("Server started at: " + String(8086));
+        console.log("Server started at: http://localhost:" + String(8086));
         
       }));
 
